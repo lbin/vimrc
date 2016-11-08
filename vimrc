@@ -95,7 +95,7 @@ set smartindent
 set lazyredraw
 
 " Ignore case when searching
-set ignorecase 
+set ignorecase
 
 " Don't ignore case when search has capital letter
 set smartcase
@@ -218,7 +218,7 @@ endfunction
 " ----------------------------------------------------------------------------
 
 set background=dark
-colorscheme solarized
+colorscheme molokai
 
 function! s:rotate_colors()
 if !exists('s:colors')
@@ -400,7 +400,7 @@ let g:tagbar_type_cpp = {
  \ 'kinds'     : [
      \ 'c:classes:0:1',
      \ 'd:macros:0:1',
-     \ 'e:enumerators:0:0', 
+     \ 'e:enumerators:0:0',
      \ 'f:functions:0:1',
      \ 'g:enumeration:0:1',
      \ 'l:local:0:1',
@@ -468,14 +468,14 @@ endif
 if v:version >= 703
 set undodir=~/.vim/undofiles
 set undofile
-set colorcolumn=+1 
+set colorcolumn=+1
 endif
 
 " ----------------------------------------------------------------------------
 " ctrlsf.vim
 " ----------------------------------------------------------------------------
 
-nnoremap <c-f> :CtrlSF<CR>
+" nnoremap <c-f> :CtrlSF<CR>
 
 " ----------------------------------------------------------------------------
 " ctrlp.vim
@@ -508,6 +508,7 @@ inoremap <leader>; <C-x><C-o>
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
 highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 
+let g:ycm_global_ycm_extra_conf = '/home/lbin/.ycm_extra_conf.py'
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=0
