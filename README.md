@@ -40,7 +40,7 @@ Features
 - Supported all GNU/Linux
 - On-demand loading for faster startup time
 - Semantic auto-completion
-- Syntax checking 
+- Syntax checking
 - Syntax highlighting for C++11/14
 - Preservation of historical records
 - Instantly preview markdown files
@@ -63,11 +63,7 @@ Installation
 
 ### Via curl
 
-    curl -o - https://raw.githubusercontent.com/HmyBmny/vimrc/master/install-vim-plugins | sh
-
-### Via wget
-
-    wget -O - https://raw.githubusercontent.com/HmyBmny/vimrc/master/install-vim-plugins | sh
+    curl -o - https://raw.githubusercontent.com/lbin/vimrc/master/install-vim-plugins | sh
 
 Included Plugins
 -----
@@ -82,7 +78,7 @@ I think you should read the docs of these plugins and .vimrc to use them efficie
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): True Sublime Text style multiple selections for Vim
 - [vim-move](https://github.com/matze/vim-move): Plugin to move lines and selections up and down
 - [YankRing.vim](https://github.com/vim-scripts/YankRing.vim): Maintains a history of previous yanks, changes and deletes
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs): Vim plugin, insert or delete brackets, parens, quotes in pair 
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs): Vim plugin, insert or delete brackets, parens, quotes in pair
 - [vim-operator-user](https://github.com/kana/vim-operator-user): Vim plugin: Define your own operator easily
 - [vim-clang-format](https://github.com/rhysd/vim-clang-format): Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript and TypeScript
 - [wildfire.vim](https://github.com/gcmt/wildfire.vim): Smart selection of the closest text object
@@ -91,7 +87,7 @@ I think you should read the docs of these plugins and .vimrc to use them efficie
 - [vim-protodef](https://github.com/derekwyatt/vim-protodef): Vim plugin for pulling in C++ function prototypes into implementation files
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter): Vim plugin for intensely orgasmic commenting
 - [nerdtree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
-- [powerline](https://github.com/powerline/powerline): Powerline is a statusline plugin for vim 
+- [powerline](https://github.com/powerline/powerline): Powerline is a statusline plugin for vim
 - [tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags in a window, ordered by scope
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): A solid language pack for Vim
 - [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim
@@ -145,9 +141,9 @@ The `<leader>` key is `;`
 #### Normal mode
 
 - `;fs` Switch between companion source files (e.g. ".h" and ".cpp")
-- `]b` Jump to the next buffer 
-- `[b` Jump to the previous buffer 
-- `;ud` Toggle Gundo visible 
+- `]b` Jump to the next buffer
+- `[b` Jump to the previous buffer
+- `;ud` Toggle Gundo visible
 - `<C-f>` Search and split a new window to show search result
 - `<C-p>` Open ctrlp window (alternative :CtrlP)
 - `;md` Launch the preview window for current markdown file
@@ -238,7 +234,7 @@ FAQ
 
 ### Can't build vim correctly
 
-This wiki [Building-Vim-from-source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) may be helpful for you. 
+This wiki [Building-Vim-from-source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) may be helpful for you.
 
 LINKS
 -----
