@@ -1,24 +1,20 @@
-" >>>>
-" .vimrc of Bo Liu
-" https://github.com/hmybmny/vimrc
-
 set nocompatible
-
-" <<<<
-" >>>>
-" VIM-PLUG BLOCK
+set nobackup
 
 silent! if plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign']  }
 
 " Colors
-Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
-Plug 'kristijanhusak/vim-hybrid-material'
 
 " Edit
 Plug 'SirVer/ultisnips'
+
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'Yggdroot/indentLine'
+
 Plug 'terryma/vim-multiple-cursors'
 Plug 'matze/vim-move'
 Plug 'vim-scripts/YankRing.vim'
@@ -33,7 +29,7 @@ Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp', 'objc'] }
 Plug 'derekwyatt/vim-protodef', { 'for': ['c', 'cpp', 'objc'] }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 augroup nerd_loader
 autocmd!
@@ -51,7 +47,7 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle'      }
 Plug 'sheerun/vim-polyglot'
 
 " Lint
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
+" Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
 
 Plug 'fholgado/minibufexpl.vim'
 Plug 'sjl/gundo.vim'
@@ -95,7 +91,7 @@ set smartindent
 set lazyredraw
 
 " Ignore case when searching
-set ignorecase
+set ignorecase 
 
 " Don't ignore case when search has capital letter
 set smartcase
@@ -390,7 +386,7 @@ let NERDTreeAutoDeleteBuffer=1
 
 inoremap <F2> <esc>:TagbarToggle<cr>
 nnoremap <F2> :TagbarToggle<cr>
-
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
 let tagbar_left=1
 let tagbar_width=32
 let g:tagbar_sort = 0
@@ -400,7 +396,7 @@ let g:tagbar_type_cpp = {
  \ 'kinds'     : [
      \ 'c:classes:0:1',
      \ 'd:macros:0:1',
-     \ 'e:enumerators:0:0',
+     \ 'e:enumerators:0:0', 
      \ 'f:functions:0:1',
      \ 'g:enumeration:0:1',
      \ 'l:local:0:1',
@@ -438,9 +434,9 @@ let g:tagbar_type_cpp = {
 " syntastic
 " ----------------------------------------------------------------------------
 
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_javascript_checkers = ['standard']
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 
 " ----------------------------------------------------------------------------
 " minibufexpl
@@ -468,7 +464,7 @@ endif
 if v:version >= 703
 set undodir=~/.vim/undofiles
 set undofile
-set colorcolumn=+1
+set colorcolumn=+1 
 endif
 
 " ----------------------------------------------------------------------------
@@ -508,10 +504,11 @@ inoremap <leader>; <C-x><C-o>
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
 highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 
-let g:ycm_global_ycm_extra_conf = '/home/lbin/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='/Users/libin/.ycm_extra_conf.py'
+" VIM-PLUG BLOCK
 let g:ycm_complete_in_comments=1
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tags_files=0
+let g:ycm_confirm_extra_conf=1
+let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
